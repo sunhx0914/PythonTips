@@ -23,6 +23,7 @@ def recv_data(udp_socket):
     recv_msg = recv_tuple[0].decode("gbk")  # window gbk   linux utf-8
     recv_addr = recv_tuple[1]
     print("%s: %s" % (recv_addr, recv_msg))
+    # print("%s: %s" % (str(recv_addr), recv_msg))  # str 可以不加吗
 
 
 def main():

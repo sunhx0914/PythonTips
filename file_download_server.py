@@ -4,7 +4,7 @@ import socket
 def send_file_2_client(new_client_socket, client_addr):
     # 1. 接收客户端 需要下载的文件名
     # 接收客户端发送过来的 要下载的文件名
-    file_name = new_client_socket.recv(1024).decode("utf-8")
+    file_name = new_client_socket.recv(1024).decode("gbk")
     print("客户端(%s)需要下载文件是：%s" % (str(client_addr), file_name))
     file_content = None
     # 2. 打开这个文件，读取数据

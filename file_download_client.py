@@ -22,7 +22,7 @@ def main():
     recv_data = tcp_socket.recv(1024)  # 1024--->1K  1024*1024--->1k*1024=1M 1024*1024*124--->1G
     # 这是简单实现，大文件有问题
     if recv_data:  # 如果接收到数据
-        # 7. 保存接收到的数据到一个文件中
+        # 7. 保存接收到的数据到一个文件中 由于收到数据为字节型，因此直接 wb 就可以
         with open("[接收]" + download_file_name, "wb") as f:
             f.write(recv_data)
 

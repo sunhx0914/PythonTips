@@ -57,6 +57,7 @@ def main():
         file_name = queue.get()
         copy_ok_num += 1
         print("\r拷贝的进度为：%.2f %%" % (copy_ok_num/all_file_num*100), end="")
+        # \r 默认将指针返回到最开始后输出（在原位置再次输出）
         if copy_ok_num >= all_file_num:
             break
     print()
